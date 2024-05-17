@@ -2,10 +2,12 @@
 
 # Database
 ### Product
-![image](https://github.com/Dia2001/api-global/assets/88370983/7efe0d61-45c7-4980-8015-4707f97ac117)
+![image](https://github.com/Dia2001/api-global/assets/88370983/31ffe3ef-3a32-44ad-ab2a-b6dc938c6ab8)
+
 
 ### Cart
-![image](https://github.com/Dia2001/api-global/assets/88370983/01e8a02d-31c3-4e95-ad21-c157b3ed5d7a)
+![image](https://github.com/Dia2001/api-global/assets/88370983/165548b5-d218-426d-a686-e73a4994c221)
+
 
 # Back-End
 # Front-End
