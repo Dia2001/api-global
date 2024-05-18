@@ -12,7 +12,8 @@ namespace ApiGlobal.Model.Entities.Identity
     public enum GROUP_ROLE
     {
         Admin = 1,
-        User = 2,
+        Product = 2,
+        Cart=3,
     }
     [Table("Roles")]
     public class Role : IdentityRole<Guid>, IEntity<Guid>

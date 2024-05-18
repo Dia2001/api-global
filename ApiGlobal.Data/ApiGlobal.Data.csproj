@@ -6,4 +6,21 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Infrastructure\" />
+    <Folder Include="Migrations\" />
+    <Folder Include="Repository\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApiGlobal.Common\ApiGlobal.Common.csproj" />
+    <ProjectReference Include="..\ApiGlobal.DTO\ApiGlobal.DTO.csproj" />
+    <ProjectReference Include="..\ApiGlobal.Model\ApiGlobal.Model.csproj" />
+  </ItemGroup>
+
 </Project>
