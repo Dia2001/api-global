@@ -31,6 +31,7 @@ namespace ApiGlobal.Data.Extension
             }
             context.SaveChanges();
             #endregion
+
             #region Create user
             Guid? userId = context.Users.Where(x => x.Email == "admin@gmail.com").Select(x => x.Id).FirstOrDefault();
             if (userId == Guid.Empty)
@@ -44,7 +45,7 @@ namespace ApiGlobal.Data.Extension
                     NormalizedEmail = adminDTO.Email,
                     NormalizedUserName = adminDTO.UserName,
                     UserName = adminDTO.UserName,
-                    PhoneNumber = "0339181198",
+                    PhoneNumber = "0898514784",
                     TwoFactorEnabled = false,
                     PhoneNumberConfirmed = true,
                     FullName = "Admin"

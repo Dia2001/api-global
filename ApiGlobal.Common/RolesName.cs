@@ -11,7 +11,6 @@ namespace ApiGlobal.Common
         public const string ROLE_SYSTEM_ADMIN = "ROLE_SYSTEM_ADMIN";
 
         #region PRODUCT
-     
         public const string ROLE_EMPLOYEE_EDIT_VIEW_PRODUCT = "ROLE_EMPLOYEE_EDIT_VIEW_PRODUCT";
         #endregion
 

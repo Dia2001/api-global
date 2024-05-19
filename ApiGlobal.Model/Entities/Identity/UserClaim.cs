@@ -14,4 +14,4 @@ namespace ApiGlobal.Model.Entities.Identity
 
     }
 }
-}
+

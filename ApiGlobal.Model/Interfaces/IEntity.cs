@@ -10,5 +10,5 @@ namespace ApiGlobal.Model.Interfaces
     {
         TKey Id { get; set; }
     }
-    }
+    
 }
