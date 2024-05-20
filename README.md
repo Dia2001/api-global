@@ -18,7 +18,8 @@ Customer(user) xem sản phẩm, thêm sản phẩm vào giỏ hàng(thao tác t
 ![image](https://github.com/Dia2001/api-global/assets/88370983/165548b5-d218-426d-a686-e73a4994c221)
 
 # Database Development Identity custom
-![image](https://github.com/Dia2001/api-global/assets/88370983/3cffac6e-f48b-4fa4-bfae-928640ecc5b0)
+![image](https://github.com/Dia2001/api-global/assets/88370983/b7e256fd-1722-4c7f-8174-897a22a42e2f)
+
 
 
 # Back-End
