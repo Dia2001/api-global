@@ -9,13 +9,16 @@ Customer(user) xem sản phẩm, thêm sản phẩm vào giỏ hàng(thao tác t
 ### Do mini app nên tính năng sẽ giới hạn như sau:
 - Customer(user): có thể xem tất cả các sản phẩm --> không cần role, thêm một hoặc nhiều sản phẩm vào giỏ hàng(Khi ta nhấn thêm sản phẩm vào giỏ hàng bên phía front-end thì không cớ lưu vào database mục đích chỉ để áp dụng sate manage ở phía front-end. Ở bên màn hình giỏ hàng nhấn thêm thì sẽ lưu tất cả các sản phẩm ở phần sate management) --> role(user)
 - Employee: có thể xem tất cả các sản phẩm --> không cần role, sửa số lượng sản phẩm --> role(employee)
-# Database
+# Database Disign
 ### Product
 ![image](https://github.com/Dia2001/api-global/assets/88370983/31ffe3ef-3a32-44ad-ab2a-b6dc938c6ab8)
 
 
 ### Cart
 ![image](https://github.com/Dia2001/api-global/assets/88370983/165548b5-d218-426d-a686-e73a4994c221)
+
+# Database Development Identity custom
+![image](https://github.com/Dia2001/api-global/assets/88370983/3cffac6e-f48b-4fa4-bfae-928640ecc5b0)
 
 
 # Back-End
