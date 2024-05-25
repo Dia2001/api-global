@@ -12,8 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ApiGlobal.Common\ApiGlobal.Common.csproj" />
     <ProjectReference Include="..\ApiGlobal.Data\ApiGlobal.Data.csproj" />
     <ProjectReference Include="..\ApiGlobal.Model\ApiGlobal.Model.csproj" />
+    <ProjectReference Include="..\ApiGlobal.Service\ApiGlobal.Service.csproj" />
   </ItemGroup>
 
 </Project>

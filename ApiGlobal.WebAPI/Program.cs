@@ -3,6 +3,10 @@ using ApiGlobal.Data.Extension;
 using ApiGlobal.DTO.User;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using Microsoft.EntityFrameworkCore;
+using ApiGlobal.Sercurity;
+using ApiGlobal.Service.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +25,28 @@ builder.Services.AddDbContext<BuildDbContext>(options => {
 
 #region Dependency Injection
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddRepositoryDependencyExtensition();
+builder.Services.AddServiceDependencyExtension();
+#endregion
+
+#region Logging
+string outputFormat = "{Timestamp:yyyy-MM-dd HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}";
+string[] excludedKeywords = { "Route matched with", "Executing JsonResult", "Executed action", "Executed endpoint", "Executing endpoint" };
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .Filter.ByExcluding(logEvent => excludedKeywords.Any(keyword => logEvent.MessageTemplate.Text.Contains(keyword)))
+    .WriteTo.Console(outputTemplate: outputFormat)
+    .WriteTo.RollingFile("Logs\\Log-{Date}.txt", retainedFileCountLimit: null, outputTemplate: outputFormat)
+    .CreateLogger();
+builder.Services.AddLogging(loggingBuilder =>
+{
+    loggingBuilder.ClearProviders();
+    loggingBuilder.AddSerilog();
+});
+#endregion
+
+#region Identity
+builder.Services.AddIdentityFrameworkCore();
 #endregion
 
 var app = builder.Build();
@@ -38,6 +64,7 @@ if (bool.Parse(builder.Configuration["SeedData"]) == true)
         SeedData.Initialize(scope.ServiceProvider, adminDTO);
     }
 }
+
 #endregion
 
 // Configure the HTTP request pipeline.
@@ -46,6 +73,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<ErrorHandlerMiddleware>();
 
 app.UseHttpsRedirection();
 
