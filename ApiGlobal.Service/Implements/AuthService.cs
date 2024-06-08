@@ -115,15 +115,7 @@ namespace ApiGlobal.Service.Implements
 
       
 
-        public async Task MigrationDb()
-        {
-            string BaseUrl = "https://tienganhtot.portal.canbantot.com";
+   
 
-        }
-
-        Task<SingleId> IAuthService.CreateUser(UserSignUpDTO dto)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

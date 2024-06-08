@@ -17,7 +17,7 @@ namespace ApiGlobal.Service.Extensions
             services.AddSingleton<JwtService>();
 
             services.AddScoped<IAuthService, AuthService>();
-
+            services.AddScoped<IUserService, UserService>();
             return services;
         }
     }
